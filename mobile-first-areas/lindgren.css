@@ -1,0 +1,111 @@
+/* GENERAL */
+
+:root,body {
+  margin: 0;
+  padding: 0;
+}
+
+/* 
+  Basic styles & define dimensions
+  to nearly empty grid kids
+*/
+main > * {
+  border: 4px solid blueviolet;
+  color: blueviolet;
+  font-weight: bolder;
+  margin: 20px;
+  padding: 10px;
+}
+
+h1 {font-size: 1.25rem;}
+h2 {font-size: 1.05rem;}
+
+/* HEADER */
+.header__page_container {
+  height: 30vh;
+  background: blueviolet;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.header__page_container h1 {
+  margin:0;
+  padding: 20px;
+}
+
+/* GRID */
+
+/* Grid Area Definitions */
+nav               {grid-area: nav;}
+.first_priority   {grid-area: pr1;}
+.second_priority  {grid-area: pr2;}
+aside             {grid-area: asd;}
+footer            {grid-area: ftr;}
+
+/* Tablet/Medium-Sized Screens */
+@media screen and (min-width: 768px) {
+  main {
+    display: grid;
+    grid-template-columns: 30ch repeat(2, 2fr) 1fr 1fr;
+    grid-template-rows: repeat(7, 1fr);
+    gap: 1em;
+    grid-template-areas:
+      "nav pr1 pr1 pr1 pr1"
+      "nav pr1 pr1 pr1 pr1"
+      "nav pr2 pr2 pr2 pr2"
+      "asd asd asd asd asd"
+      "ftr ftr ftr ftr ftr"
+      ;
+  }
+
+  main > * { margin: 0; }
+}
+
+/* Desktop/Larger-Sized Screens */
+@media screen and (min-width: 1200px) {
+  .header__page_container {
+    max-width: 1200px;
+    margin: 0 auto 20px auto;
+  }
+
+  main {
+    max-width: 980px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 30ch repeat(2, 2fr) 1fr 30ch;
+    grid-template-rows: repeat(7, 1fr);
+    gap: 1em;
+    grid-template-areas:
+      "nav nav nav nav nav"
+      "pr1 pr1 pr1 pr1 asd"
+      "pr1 pr1 pr1 pr1 asd"
+      "pr1 pr1 pr1 pr1 asd"
+      "pr2 pr2 pr2 pr2 asd"
+      "pr2 pr2 pr2 pr2 asd"
+      "ftr ftr ftr ftr ftr"
+      ;
+  }
+
+  main > * { margin: 0; }
+}
+
+/* XL Screens */
+@media screen and (min-width: 1980px) {
+  main {
+    display: grid;
+    grid-template-columns: 150px 40ch 1fr 40ch 150px;
+    grid-template-rows: 30vh repeat(6, 1fr) 20vh;
+    grid-template-areas:
+      "nav pr1 pr1 pr1 ."
+      "nav pr1 pr1 pr1 ."
+      "nav asd pr2 pr2 ."
+      "nav asd pr2 pr2 ."
+      "nav asd ftr ftr ."
+      "nav asd ftr ftr ."
+      ;
+  }
+
+  main > * {
+    margin-bottom: 8px;
+  }
+}

@@ -13,7 +13,7 @@ past-finals
 readings
 acumen.org
 models-sitemaps
-mobile-first-areas/lindgren.css
+# mobile-first-areas/lindgren.css
 
 # General
 *.code-workspace
@@ -76,3 +76,4 @@ walkman
 
 # min files
 *.min.*
+/shape-outside-layout

@@ -1,0 +1,117 @@
+/* FONT IMPORT */
+@import url('https://fonts.googleapis.com/css2?family=Jersey+25&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* TOC ============
+  1. ROOT & BODY
+  2. TYPOGRAPHY
+  3. GENERAL BASE STYLES
+  4. GRID LAYOUTS
+  5. FLEX COMPONENTS
+  6. @MEDIA QUERIES
+*/
+
+/* 1. ROOT & BODY======*/
+:root {
+  font-size: 18px;
+
+  --backgroundColor: white;
+  --foregroundColor: black;
+
+  --accentColor: #ffbf1d;
+  --accentShade1: #fff5dd;
+  --accentShade2: #fce099;
+  --accentShade3: #ffca44;
+  --accentShade4: #f0ac00;
+  --accentShade5: #e7a600;
+
+  /* Font Families */
+  --headingFamily: "Jersey 25", sans-serif;
+  --copyFamily: "Noto Sans", sans-serif;
+}
+
+body {
+  font-family: var(--copyFamily);
+  color: var(--foregroundColor);
+}
+
+
+/* 2. TYPOGRAPHY======*/
+
+/* Font Families */
+h1,h2,h3,h4,h5,h6 { font-family: var(--headingFamily);}
+
+/* Font Sizing */
+
+
+/* Font Spacing */
+
+
+/* Font Colors */
+
+
+/* <a> Links / CTAs */
+
+
+/* CTA */
+.cta__primary {
+  display: block;
+  max-width: max-content;
+  background-color: var(--accentShade2);
+  color: var(--foregroundColor);
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: 0.25s;
+
+  &:hover {
+    text-decoration: solid;
+    background-color: var(--foregroundColor);
+    color: var(--accentShade2);
+    transition: 0.25s;
+  }
+}
+
+/* 3. GENERAL BASE=======*/
+
+/* Images */
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.object_fit__cover { object-fit: cover; }
+.object_fit__contain { object-fit: contain; }
+
+/* Main */
+main {
+  min-width: 300px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+
+/* 4. GRID LAYOUTS=======*/
+
+
+/* 5. FLEX COMPONENTS====*/
+
+.flex__1_3_200_text_image_cover {
+  display: flex;
+  gap: 20px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  /* Flex Items */
+  &> *:nth-child(1) { flex: 1 1 200px; }
+  &> *:nth-child(2) { flex: 3 1 200px; }
+
+  /* Image/Media Container */
+  @media screen and (max-width: 435px) {
+    &> *:nth-child(1) { max-height: 30vh; }
+  }
+
+}
+
+/* 6. @MEDIA QUERIES=====*/

@@ -75,7 +75,6 @@ header, .flex-row {
 
   */
   .flex__two-thirds { flex: 3 1 200px; }
-  
   .flex__one-third { flex: 1 1 200px; }
 
   .textbox {

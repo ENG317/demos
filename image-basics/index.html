@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <title>Home - Kittens'R'Us</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,21 +13,21 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-BPWN43QHBB"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+  function gtag() {dataLayer.push(arguments);}
   gtag('js', new Date());
 
   gtag('config', 'G-BPWN43QHBB');
 </script>
+
 <body>
+
   <header>
-    <img src="images/kittens/kittensrus-logo.gif"
-         width="93px"
-         height="98px"
-         alt="" />
+    <img src="images/kittens/kittensrus-logo.gif" width="93px" height="98px" alt="" />
     <h1>
       Kittens &amp; Dinos
     </h1>
   </header>
+
   <main>
 
     <!-- IMG element: Basics + srcset & sizes attributes -->
@@ -37,14 +38,16 @@
       <section id="img__basics">
         <h3>The Basics</h3>
         <p>
-          Below, I use one of my image files to render an image with the <code>src</code>, <code>width</code>, <code>height</code>, and <code>alt</code> attributes.
+          Below, I use one of my image files to render an image with the <code>src</code>, <code>width</code>,
+          <code>height</code>, and <code>alt</code> attributes.
         </p>
         <p class="note">
-          <strong>NOTE</strong>: We use the <code>width</code> and <code>height</code> attributes to tell the browser to reserve loading space. We do not use it to for styling/design. After we learn CSS, we can design flexible sizing of images with CSS.
+          <strong>NOTE</strong>: We use the <code>width</code> and <code>height</code> attributes to tell the browser to
+          reserve loading space. We do not use it to for styling/design. After we learn CSS, we can design flexible
+          sizing of images with CSS.
         </p>
-        <img src="images/kittens/cute-kittens-480x267.jpg"
-             width="480px" height="267px"
-             alt="Five cute kittens set in a row on some green grass" />
+        <img src="images/kittens/cute-kittens-480x267.jpg" width="480px" height="267px"
+          alt="Five cute kittens set in a row on some green grass" />
 
       </section>
 
@@ -53,10 +56,13 @@
         <h3>On <code>srcset</code></h3>
         <div>
           <p>
-            In the <code>img</code> element below, I use the <code>srcset</code> attribute to provide the browser a set of images to choose from for the user, based on factors like their device width, internet connection, and pixel density of the screen.
+            In the <code>img</code> element below, I use the <code>srcset</code> attribute to provide the browser a set
+            of images to choose from for the user, based on factors like their device width, internet connection, and
+            pixel density of the screen.
           </p>
           <p>
-            Each image source in the <code>srcset</code> needs 3 values separated by a comma and all contained within double-quotation marks:
+            Each image source in the <code>srcset</code> needs 3 values separated by a comma and all contained within
+            double-quotation marks:
           </p>
           <ol>
             <li>
@@ -70,24 +76,24 @@
             </li>
           </ol>
           <p>
-            Use the inspection tool to review the syntax, or, if you have cloned this repo, open and review it in your code editor.
+            Use the inspection tool to review the syntax, or, if you have cloned this repo, open and review it in your
+            code editor.
           </p>
         </div>
         <!--
-          3 SRCSET Values and Syntax
-            1. An image path/filename
-            2. A space
-            3. The image's intrinsic width in pixels (w) or pixel density (x)
+          Three SRCSET Values and Syntax
+          1. An image path/filename
+          2. A space
+          3. The image's intrinsic width in pixels (w) or pixel density (x)
          -->
-        <img src="./images/dinos/tyranasaurus-rex-dinosaur-skeleton-640.jpg"
-             width="640" height="427"
-             srcset="images/dinos/tyranasaurus-rex-dinosaur-skeleton-640.jpg 640w,
+        <img src="./images/dinos/tyranasaurus-rex-dinosaur-skeleton-640.jpg" width="640" height="427" srcset="images/dinos/tyranasaurus-rex-dinosaur-skeleton-640.jpg 640w,
                      images/dinos/tyranasaurus-rex-dinosaur-skeleton-960.png 960w,
                      images/dinos/tyranasaurus-rex-dinosaur-skeleton-1800.png 1800w"
-             alt="The large mouth of a Tyranasaurus Rex skeleton on display"
-        />
+          alt="The large mouth of a Tyranasaurus Rex skeleton on display" />
       </section>
+
     </article>
   </main>
 </body>
+
 </html>

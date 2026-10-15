@@ -67,7 +67,7 @@ SHARED
 .basic > *,
 .grow-shrink-wrap > *,
 .flex-offset-proportions > * {
-  /* border: 1px whitesmoke solid; */
+  border: 1px whitesmoke solid;
 }
 
 /*===========
@@ -76,11 +76,20 @@ BASIC FLEXBOX
 
 .basic {
   display: flex;
-}
 
-/* Children Boxes */
-.box {
-  /* padding: 10px; */
+  /* Children Boxes */
+  & .box {
+    /* padding: 10px; */
+  }
+  & .box-1 {
+
+  }
+  & .box-2 {
+
+  }
+  & .box-3 {
+
+  }
 }
 
 /*=========

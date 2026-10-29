@@ -1,13 +1,25 @@
-main {
+:root {
+  font-size: 18px;
+}
+
+header {
+  margin: 3rem 0;
+}
+
+.grid__testing_container {
   display: grid;
   grid-template-columns: auto 1fr auto;
-}
 
-main > div {
-  border:chocolate solid 2px;
-  /* height: 50px; */
-}
+  & > div {
+    border:chocolate solid 2px;
+    /* height: 50px; */
+  }
 
-/* .big_chocolate {
-  grid-column: 3 / 5;
-} */
+  & .big_chocolate {
+    /* grid-column: 1 / -1; */
+    /* grid-row: 2 / 3; */
+
+    background-color: chocolate;
+    color: white;
+  }
+}

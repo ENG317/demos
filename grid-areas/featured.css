@@ -1,8 +1,9 @@
 /* Root Variables */
 :root {
   font-size: 20px;
-  --background-color: #63fdf6;
-  --foreground-color: #8a2be2;
+  --background-color: #d8fffd;
+  --foreground-color: #2e0554;
+  --featured-color: #b45976;
 }
 
 /* GENERAL */
@@ -32,21 +33,34 @@ img {
 /* FA Grid */
 
 /* Define grid area keywords */
-.fa_top { grid-area: article_1; }
-.fa_2   { grid-area: article_2; }
-.fa_3   { grid-area: article_3; }
-.fa_4   { grid-area: article_4; }
+.fa_top { grid-area: a1; }
+.fa_2   { grid-area: a2; }
+.fa_3   { grid-area: a3; }
+.fa_4   { grid-area: a4; }
+.fa_5   { grid-area: a5; }
 
 /* How could I create a grid on the featured_articles__container class? */
 .featured_articles__container {
   max-width: 1280px;
   margin: auto;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+  grid-template-columns: 2.5ch repeat(6, 1fr) 2.5ch;
   grid-template-areas:
-    "article_1 article_1 article_1 article_1"
-    "article_1 article_1 article_1 article_1"
-    "article_2 article_2 article_3 article_3"
-    "article_4 article_4 article_4 article_4"
+    ". a1 a1 a1 a1 a1 a1 ."
+    ". a1 a1 a1 a1 a1 a1 ."
+    ". a2 a2 a2 . a3 a3 ."
+    "a5 a5 a5 a5 . a4 a4 ."
+    "a5 a5 a5 a5 . a4 a4 ."
   ;
+
+  .fa_top {
+    & .tfa_content_container {
+      max-width: 660px;
+    }
+  }
+
+  .fa_5 {
+    background-color: var(--featured-color);
+  }
 }

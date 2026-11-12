@@ -1,16 +1,24 @@
-h1 { font-size: 2rem; }
-
-/*
-  See https://screensiz.es for example breakpoints
+/* DEMO: @media queries with CSS Nesting
+   By: Chris Lindgren
 */
-@media screen and (min-width: 680px) {
 
-  h1 { font-size: 4rem; }
-  
-}
+.flex__container {
+  /* Relying on default block behavior 0px-679px */
 
-@media screen and (min-width: 1080px) {
+  /* @meda Condition
+     If a screen & a minimum width of 680px,
+     Then apply the following rulesets instead.
+  */
+  @media screen and (min-width: 680px) {
+    display: flex;
+    flex-wrap: wrap;
 
-  h1 { font-size: 6rem; }
-  
+    & > * {
+      flex: 1 1 200px;
+    }
+    & > *:last-child {
+      flex: 1 0 500px;
+    }
+  }
+
 }

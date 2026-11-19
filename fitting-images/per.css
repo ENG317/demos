@@ -5,54 +5,61 @@ h2 {
   text-align: center;
 }
 
-/* INTRINSIC SIZE CONTAINER */
-.intrinsic_size_container {
-  width: 50vw;
-  margin: 4rem auto;
-  border: 2px solid black;
+/* New Default Image Behavior */
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
-/* SHARED BOX SIZING */
-.percentage-container,
-.object_fit {
+/* Shared Box Sizing & Styles */
+.intrinsic_size__container,
+.percentage__container,
+.object_fit__container,
+.cf__container {
   width: 50vw;
   height: 30vh;
   margin: 4rem auto;
   border: 2px solid black;
 }
 
-/* Percentage Image */
-.percentage-container img {
-  width: 100%;
-  height: 100%;
-}
-
-/* Object-Fit -- Cover*/
+/* OBJECT FIT */
 /* 
   You NEED to provide the width-height values for object-fit to work. This example uses the value of "cover" 
 
   See the docs for other values to apply.
 */
-.object_fit__cover {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.object_fit__container {
+
+  & img {
+    object-fit: cover;
+  }
 }
 
-/* Floating Fix */
+/* FLOAT FIX & @MEDIA OBJECT FIT */
 /* 
   Play around with these rules in the inspection tool, as per the HTML comments. How can you make the content design work for your goals?
 */
-.demo-imp-clear {
-  width: 50vw;
-  margin: 4rem auto;
-  border: 2px solid black;
-}
-.demo-imp-clear .img-float-right {
-  width: 150px;
-  margin: 0 2rem;
-  float: right;
-}
-.clear_fix {
-  /* clear: both; */
+
+/* Utilities */
+
+.clear_fix { clear: both; }
+.float_right { float: right; }
+
+
+.cf__container {
+  height: auto;
+
+  & .media__container {
+    width: 150px;
+
+    @media screen and (max-width: 630px) {
+      width: 100%;
+      height: 200px;
+
+      & img {
+        object-fit: cover;
+      }
+    }
+  }
 }

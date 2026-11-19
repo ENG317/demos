@@ -18,9 +18,9 @@
 </script>
 <body>
 
-  <section class="intrinsic_size_container">
+  <section class="intrinsic_size__container">
     <h2>Intrinsic size of this image</h2>
-    <img src="http://placekitten.com/200/500" alt="Placeholder image">
+    <img src="https://placehold.co/200x500" alt="">
   </section>
 
   <!--=============================
@@ -31,8 +31,8 @@
   -->
   <section>
     <h2>1. PERCENTAGE OF PARENT CONTAINER</h2>
-    <div class="percentage-container">
-      <img src="http://placekitten.com/200/500" alt="Placeholder image">
+    <div class="percentage__container">
+      <img src="https://placehold.co/200x500" alt="">
     </div>
   </section>
 
@@ -41,8 +41,8 @@
   ==========-->
   <section>
     <h2>2. OBJECT-FIT WITHIN PARENT CONTAINER</h2>
-    <div class="object_fit">
-      <img class="object_fit__cover" src="http://placekitten.com/200/500" alt="Placeholder image">
+    <div class="object_fit__container">
+      <img src="https://placehold.co/200x500" alt="">
     </div>
   </section>
 
@@ -56,37 +56,42 @@
 
     What happens? How can you achieve a better content design?
   -->
-  <h2>3. CLEAR FIX FLOATS</h2>
-  <div class="demo-imp-clear">
-    <h3>With content now</h2>
-    <img src="http://placekitten.com/200/500"
-         class="img-float-right"
-         alt="Placeholder image">
-    <p>
-      Play around with the percentage value and consider using float behavior to create interesting image-text relationships.
-    </p>
-    <p>
-      Sit consectetur qui maxime deserunt, ab excepturi facilis, eaque id hic est tempora voluptatibus porro accusantium molestias optio, repellendus ea? Aut cumque veritatis quaerat vel, incidunt perspiciatis voluptatibus ad rem voluptate minima. Cumque illo consequuntur dolore soluta aspernatur asperiores molestiae impedit quos, eaque, corporis, qui assumenda? Similique dolorum animi ipsam.
-    </p>
-  </div>
 
-  <div class="clear_fix"></div>
+  <div class="cf__container">
+    <h2>3. CLEAR FIX FLOATS</h2>
+    <div>
+      <h3>With content now</h3>
+      <div class="media__container float_right">
+        <img src="https://placehold.co/200x500" alt="">
+      </div>
+      <p>
+        Play around with the percentage value and consider using float behavior to create interesting image-text relationships.
+      </p>
+      <p>
+        Sit consectetur qui maxime deserunt, ab excepturi facilis, eaque id hic est tempora voluptatibus porro accusantium molestias optio, repellendus ea? Aut cumque veritatis quaerat vel, incidunt perspiciatis voluptatibus ad rem voluptate minima. Cumque illo consequuntur dolore soluta aspernatur asperiores molestiae impedit quos, eaque, corporis, qui assumenda? Similique dolorum animi ipsam.
+      </p>
+    </div>
 
-  <div class="demo-imp-clear">
-    <h3>Some content below the potentially floated image above</h3>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam quos laudantium aperiam, nisi beatae veritatis, amet repudiandae placeat vitae optio repellat cumque nemo fuga facere.
-    </p>
-    <p>
-      Omnis quas officiis laborum ducimus vitae, obcaecati enim quis. Iste qui voluptatum vitae reiciendis perferendis sunt laudantium! Quod neque labore doloremque laudantium molestiae debitis. Dolore?
-    </p>
-    <p>
-      Temporibus quaerat nemo eveniet ducimus voluptas omnis ipsa assumenda. Sapiente reiciendis facere illo, voluptates aperiam nesciunt. Sapiente eaque dignissimos quasi quod adipisci vero, nihil corrupti?
-    </p>
-    <p>
-      Id inventore unde autem, veniam accusamus qui hic saepe exercitationem error blanditiis, molestias doloremque pariatur tempora provident consequuntur illo quas modi vero, tempore nostrum quos.
-    </p>
+    <div class="clear_fix"></div>
+
+    <div>
+      <h3>Some content below the potentially floated image above</h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam quos laudantium aperiam, nisi beatae veritatis, amet repudiandae placeat vitae optio repellat cumque nemo fuga facere.
+      </p>
+      <p>
+        Omnis quas officiis laborum ducimus vitae, obcaecati enim quis. Iste qui voluptatum vitae reiciendis perferendis sunt laudantium! Quod neque labore doloremque laudantium molestiae debitis. Dolore?
+      </p>
+      <p>
+        Temporibus quaerat nemo eveniet ducimus voluptas omnis ipsa assumenda. Sapiente reiciendis facere illo, voluptates aperiam nesciunt. Sapiente eaque dignissimos quasi quod adipisci vero, nihil corrupti?
+      </p>
+      <p>
+        Id inventore unde autem, veniam accusamus qui hic saepe exercitationem error blanditiis, molestias doloremque pariatur tempora provident consequuntur illo quas modi vero, tempore nostrum quos.
+      </p>
+    </div>
+
   </div>
+  <!-- /END cf__container -->
 
 </body>
 </html>
